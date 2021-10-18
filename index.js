@@ -69,11 +69,13 @@ search.addEventListener("input",function(){
     let noteCards=document.getElementsByClassName("noteCard");
     Array.from(noteCards).forEach(function(element){
         let cardText=element.getElementsByTagName("p")[0].innerText;
-        if(cardText.includes(inputVal)){
+        if(cardText.toUpperCase().includes(inputVal.toUpperCase())){
             element.style.display="block";
+            console.log("hello");
         }
         else{
             element.style.display="none";
+            console.log("hello world");
         }
     })
 });
